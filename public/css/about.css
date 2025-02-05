@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  background: #0f172b;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+  position: fixed;
+  top: 0; 
+  width: 100%;  
+  z-index: 1000;  
+}
+
+.menu{
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.menu li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.menu li{
+    margin-left: 10px;
+}
+
+.login{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    font-size: 20px;
+}
+
+.login li{
+    margin-left: 20px;
+    display: inline-block;
+}
+
+.login li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.logo img {
+    width: 120px; 
+    height: auto;  
+    display: block; 
+    margin: 0 auto; 
+}
+
+.account i {
+  font-size: 50px;
+  cursor: pointer;
+}
+
+.sectionBanner{
+    width: 100%;
+    height: 60dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2rem;
+    position: relative;
+    background: url(../img/banner6.jpg);
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+    text-align: center;
+}
+
+.sectionBanner::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(15, 23, 43,0.85);
+    z-index: -1;
+}
+.sectionBanner .content{
+    text-align: center;
+}
+.sectionBanner .content h1{
+    font-size: 5rem;
+    color: white;
+    margin-bottom: 3rem;
+}
+
+.sectionBanner .content p{
+    text-align: center;
+    color: white;
+}
+.sectionBanner .content p span{
+    padding: .5rem;
+}
+.sectionBanner .content p span:nth-child(1),.sectionBanner .content p span:nth-child(3){
+    color: yellow;
+}
+.sectionBanner .content p span:nth-child(2),.sectionBanner .content p span:nth-child(4){
+    color: #8d8c8c;
+}
+
+.container {
+    max-width: 800px;
+    margin: 5rem auto;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1rem;
+    margin: 1rem 0;
+}
+
+.team {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.team-member {
+    flex: 1 1 calc(33.333% - 1rem);
+    background: #f9f9f9;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
