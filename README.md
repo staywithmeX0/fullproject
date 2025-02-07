@@ -29,3 +29,5 @@ CREATE TABLE signup (
 3. **open web browser**
    ```sh
    localhost:3000
+
+(การสมัครสมาชิกต้องตั้งค่ารหัสผ่าน6ตัวขึ้นไป)
