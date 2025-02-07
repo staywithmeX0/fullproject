@@ -8,6 +8,7 @@
 - Hostname/IP: localhost
 - User:  root
 - ไม่ต้องกำหนดPasswword
+- จากนั้นทำการสร้าง database: up_food
 - จากนั้นรันคำสั่ง (ตรงช่องQuery)
 
 CREATE TABLE signup (
