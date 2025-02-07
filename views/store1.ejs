@@ -21,13 +21,10 @@
             <li><a href="contact.html">CONTACT</a></li>
         </ul>
     
-        <ul class="login" id="loginMenu">
-            <li><a href="login.html">Login</a></li>
-            <li><a href="singup.html">Sign up</a></li>
-        </ul>
+        
     
-        <div class="account" id="accountMenu" style="display: none;">
-                <a href="account.html" id="account-icon"><i class="fa-solid fa-user-circle"></i></a>
+        <div class="account" id="accountMenu" style="display:block;">
+                <a href="/account" id="account-icon"><i class="fa-solid fa-user-circle"></i></a>
         </div>
         
     </nav>
@@ -37,13 +34,13 @@
     <div class="container">
         <div class="imgstore">
             <div class="img">
-                <img src="./img/store4.jpg" alt="">
+                <img src="./img/store1.jpg" alt="">
             </div>
         </div>
         <div class="store">
             <div class="storeinfo">
-                <h1>ลุงเษม ก๋วยเตี๋ยวรสเด็ด</h1>
-                <p>ร้านก๋วยเตี๋ยวรสเด็ด เสิร์ฟก๋วยเตี๋ยวรสเข้มข้น น้ำซุปกลมกล่อม พร้อมเส้นเหนียวนุ่มและเครื่องแน่น จัดจ้านถึงใจ มีราคาที่คุ้มค่า อร่อยเด็ดในทุกชาม! </p>
+                <h1>ฮุ๊กข้าวมันไก่</h1>
+                <p>ร้านอาหารที่เน้นขายข้าวมันไก่เเละเมณูข้าวราดเเกงอื่นๆ มีรสชาติที่อร่อยเเละเรียบง่ายสะดวกสะบายเหมาะสำหรับคนที่ต้องการกินอะไรง่ายๆเเละอร่อยถูกใจ</p>
                 <div class="star-rating">
                     <input type="radio" id="star5" name="rating" value="5">
                     <label for="star5" class="star">
@@ -62,6 +59,7 @@
         </div>
             <div class="comment-box">
                 <textarea id="comment" placeholder="เขียนคอมเมนต์..." required></textarea>
+                
                 <button onclick="postComment()">โพสต์</button>
             </div>
             <div id="comments"></div>
@@ -69,7 +67,7 @@
 
     <!--container End-->
 
-    
+
     <!-- LOADER start -->
     <section class="preloader">
         <div class="content">
@@ -81,9 +79,11 @@
        </section>
        <!-- LOADER end -->
 
+    
+
     <!--script-->
     <script src="./js/loader.js"></script>
-    <script src="./js/nav.js"></script>
+    <script src="/public/js/nav.js"></script>
     <script src="./js/comment.js"></script>
     <script src="./js/star.js"></script>
 </body>

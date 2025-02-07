@@ -1,4 +1,4 @@
-let username = null;
+const username = localStorage.getItem("username");
 const profilePic = "./img/profile.jpg";
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -70,6 +70,7 @@ function addComment(username, profilePic, text, time, parent) {
         <div class='actions'>
             <span class='like-btn' onclick='likeComment("${commentId}")'>&#9829;<span id='likes-${commentId}'>0</span></span>
             <button onclick='toggleReplyBox("${commentId}")'>ตอบกลับ</button>
+            <button onclick='deleteComment("${commentId}")' style="color: red;">ลบ</button>
             <div id='reply-box-${commentId}' class='reply-box'>
                 <textarea id='reply-${commentId}' placeholder='เขียนตอบกลับ...'></textarea>
                 <button onclick='postComment("${commentId}")'>โพสต์</button>
@@ -94,4 +95,14 @@ function likeComment(commentId) {
 function toggleReplyBox(commentId) {
     let replyBox = document.getElementById("reply-box-" + commentId);
     replyBox.style.display = replyBox.style.display === "none" || replyBox.style.display === "" ? "block" : "none";
+}
+
+function deleteComment(commentId) {
+    let confirmDelete = confirm("คุณแน่ใจหรือไม่ว่าต้องการลบความคิดเห็นนี้?");
+    if (confirmDelete) {
+        let commentElement = document.getElementById(commentId);
+        if (commentElement) {
+            commentElement.remove();
+        }
+    }
 }

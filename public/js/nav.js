@@ -3,9 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
         .then(response => response.text())
         .then(data => {
             document.body.insertAdjacentHTML("afterbegin", data);
-
-            // รอให้เนื้อหาโหลดเข้ามาก่อน แล้วค่อยเรียก setupNav()
-            setTimeout(setupNav, 100);  
+            setupNav();
         })
         .catch(error => console.error("Error loading navigation:", error));
 });
@@ -13,30 +11,19 @@ document.addEventListener("DOMContentLoaded", function () {
 function setupNav() {
     let userData = localStorage.getItem("userData");
 
-    // ตรวจสอบว่าเมนูมีอยู่จริงหรือไม่ก่อนทำงาน
-    const loginMenu = document.getElementById("loginMenu");
-    const accountMenu = document.getElementById("accountMenu");
-    const logoutButton = document.getElementById("logout");
-
-    if (!loginMenu || !accountMenu) {
-        console.error("Navigation elements not found!");
-        return;
-    }
-
     if (userData) {
         userData = JSON.parse(userData);
-        loginMenu.style.display = "none";   // ซ่อนเมนู Login / Sign up
-        accountMenu.style.display = "block"; // แสดงเมนู Account
+
+        document.getElementById("loginMenu").style.display = "none";
+        document.getElementById("accountMenu").style.display = "block";
     } else {
-        loginMenu.style.display = "block";   // แสดงเมนู Login / Sign up
-        accountMenu.style.display = "none";  // ซ่อนเมนู Account
+        document.getElementById("loginMenu").style.display = "block";
+        document.getElementById("accountMenu").style.display = "none";
     }
 
-    if (logoutButton) {
-        logoutButton.addEventListener("click", function () {
-            localStorage.removeItem("userData");
-            alert("You have been logged out!");
-            window.location.href = "login.html";
-        });
-    }
+    document.getElementById("logout").addEventListener("click", function () {
+        localStorage.removeItem("userData");
+        alert("You have been logged out!");
+        window.location.href = "login.html";
+    });
 }

@@ -9,6 +9,7 @@ const app = express();
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static('public'));
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -52,28 +53,28 @@ app.get('/index.html', (req, res) => {
     res.sendFile(path.join(__dirname,'index.html'));
 });
 
-app.get('/store1.html', (req, res) => {
-    res.sendFile(path.join(__dirname,'store1.html'));
+app.get('/store1', (req, res) => {
+    res.render('store1');
 });
 
-app.get('/store2.html', (req, res) => {
-    res.sendFile(path.join(__dirname,'store2.html'));
+app.get('/store2', (req, res) => {
+    res.render('store2');
 });
 
-app.get('/store3.html', (req, res) => {
-    res.sendFile(path.join(__dirname,'store3.html'));
+app.get('/store3', (req, res) => {
+    res.render('store3');
 });
 
-app.get('/store4.html', (req, res) => {
-    res.sendFile(path.join(__dirname,'store4.html'));
+app.get('/store4', (req, res) => {
+    res.render('store4');
 });
 
-app.get('/store5.html', (req, res) => {
-    res.sendFile(path.join(__dirname,'store5.html'));
+app.get('/store5', (req, res) => {
+    res.render('store5');
 });
 
-app.get('/store6.html', (req, res) => {
-    res.sendFile(path.join(__dirname,'store6.html'));
+app.get('/store6', (req, res) => {
+    res.render('store6');
 });
 
 
@@ -81,6 +82,12 @@ app.get('/store6.html', (req, res) => {
 app.get('/signup', ifLoggedIn, (req, res) => {
     res.render('signup');
 });
+
+// Route: Login Page
+app.get('/login', ifLoggedIn, (req, res) => {
+    res.render('login');
+});
+
 
 // Route: Home Page
 app.get('/', ifNotLoggedIn, (req, res) => {
@@ -202,6 +209,32 @@ app.post('/logout', (req, res) => {
     req.session = null;
     res.redirect('/');
 });
+
+app.get('/account', async (req, res) => {
+    if (!req.session.isloggedIn) {
+        return res.redirect('/login');
+    }
+
+    const userID = req.session.userID;
+
+    try {
+        const [rows] = await dbconnection.execute('SELECT user, email FROM signup WHERE id = ?', [userID]);
+        if (rows.length === 0) {
+            return res.redirect('/login');
+        }
+
+        res.render('account', {
+            firstname: rows[0].user, // เปลี่ยนจาก firstname เป็น user
+            email: rows[0].email    
+        });
+
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+});
+
+
+
 
 
 // Start Server

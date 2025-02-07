@@ -56,79 +56,7 @@
     <!-- CONTAINER END -->
 
     <!-- LOADER START -->
-    <section class="preloader"<!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Account</title>
-            <link rel="stylesheet" href="./css/account.css">
-            <link rel="stylesheet" href="./css/loader.css">
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-        </head>
-        <body>
-        
-            <!-- NAV START -->
-            <nav>
-                <div class="logo">
-                    <img src="./img/logo.png" alt="">
-                </div>
-                <ul class="menu">
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="about.html">ABOUT</a></li>
-                    <li><a href="contact.html">CONTACT</a></li>
-                </ul>
-            
-                <ul class="login" id="loginMenu" style="display: none;">
-                    <li><a href="login.html">Login</a></li>
-                    <li><a href="signup.html">Sign up</a></li>
-                </ul>
-            
-                <div class="account" id="accountMenu" style="display: block;">
-                    <a href="#" id="account-icon"><i class="fa-solid fa-user-circle"></i></a>
-                </div>
-            </nav>
-            <!-- NAV END -->
-        
-            <!-- BANNER START -->
-            <div class="sectionBanner">
-                <div class="content">
-                    <h1>ACCOUNT</h1>
-                    <p><span>HOME</span> <span>/</span> <span>ACCOUNT</span></p>
-                </div>
-            </div>
-            <!-- BANNER END -->
-        
-            <!-- CONTAINER START -->
-            <div class="container">
-                <div class="account-box">
-                    <h2>Account Details</h2>
-                    <img id="profile-image" class="profile-img" src="./img/profile.jpg" alt="Profile Image">
-                    <p><strong>Username:</strong> <span id="user-firstname"><%= firstname %></span></p>
-        
-                    <p><strong>Email:</strong> <span id="user-email"><%= email %></span></p>
-                    <form action="/logout" method="POST">
-                        <button type="submit" class="logout-btn">Logout</button>
-                    </form>
-                </div>
-            </div>
-            <!-- CONTAINER END -->
-        
-            <!-- LOADER START -->
-            <section class="preloader">
-                <div class="content">
-                    <div class="preloaderGif">
-                        <img src="./img/loader.png" alt="">
-                    </div>
-                    <h3>Loading...</h3>
-                </div>
-            </section>
-            <!-- LOADER END -->
-            <script src="/js/loader.js"></script>
-            <script src="/js/slider.js"></script>
-        
-        </body>
-        </html>>
+    <section class="preloader"
         <div class="content">
             <div class="preloaderGif">
                 <img src="./img/loader.png" alt="">
@@ -137,6 +65,12 @@
         </div>
     </section>
     <!-- LOADER END -->
+
+    <script>
+         localStorage.setItem("username", "<%= firstname %>");
+    </script>
+    <script src="./js/loader.js"></script>
+    <script src="./js/slider.js"></script>
 
 </body>
 </html>

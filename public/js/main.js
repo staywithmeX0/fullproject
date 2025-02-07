@@ -1,13 +1,13 @@
 const productsE = [
-    { id: 1, name: "ฮุ๊กข้าวมันไก่",  image: "img/store1.jpg" ,url: "store1.html"},
-    { id: 1, name: "ร้านเจ๊กิ๊ก",  image: "img/store2.jpg" ,url: "store2.html"},
-    { id: 1, name: "ก๋วยเตี๋ยว น้ำเงี้ยว",  image: "img/store3.jpg" ,url: "store3.html"},
-    { id: 1, name: "ลุงเษม ก๋วยเตี๋ยวรสเด็ด",  image: "img/store4.jpg" ,url: "store4.html"},
+    { id: 1, name: "ฮุ๊กข้าวมันไก่",  image: "img/store1.jpg" ,url: "/store1"},
+    { id: 1, name: "ร้านเจ๊กิ๊ก",  image: "img/store2.jpg" ,url: "/store2"},
+    { id: 1, name: "ก๋วยเตี๋ยว น้ำเงี้ยว",  image: "img/store3.jpg" ,url: "/store3"},
+    { id: 1, name: "ลุงเษม ก๋วยเตี๋ยวรสเด็ด",  image: "img/store4.jpg" ,url: "/store4"},
   ];
 
   const productsX = [
-    { id: 1, name: "BB ส้มตำเเซป",  image: "img/store5.jpeg" ,url: "store5.html"},
-    { id: 1, name: "ข้ามมันไก่โกหนุน",  image: "img/store6.jpg" ,url: "store6.html"},
+    { id: 1, name: "BB ส้มตำเเซป",  image: "img/store5.jpeg" ,url: "/store5"},
+    { id: 1, name: "ข้ามมันไก่โกหนุน",  image: "img/store6.jpg" ,url: "/store6"},
   ];
 
 
