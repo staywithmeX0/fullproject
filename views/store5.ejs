@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/store.css">
+    <link rel="stylesheet" href="./css/loader.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+     <!-- Nav Start -->
+     <nav>
+        <div class="logo">
+            <img src="./img/logo.png" alt="">
+        </div>
+        <ul class="menu">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+    
+        
+    
+        <div class="account" id="accountMenu" style="display: block;">
+                <a href="/account" id="account-icon"><i class="fa-solid fa-user-circle"></i></a>
+        </div>
+        
+    </nav>
+    <!-- Nav END -->
+
+    <!--container start-->
+    <div class="container">
+        <div class="imgstore">
+            <div class="img">
+                <img src="./img/store5.jpeg" alt="">
+            </div>
+        </div>
+        <div class="store">
+            <div class="storeinfo">
+                <h1>BB ส้มตำเเซป</h1>
+                <p>ร้านอาหารไทยที่เน้นเมนูส้มตำ รสเผ็ด เปรี้ยว หวาน  เสิร์ฟพร้อมข้าวเหนียวและกับข้าวต่างๆ เช่น ไก่ย่างหรือขนมจีน ร้านส้มตำมีบรรยากาศสบายๆ และบริการรวดเร็ว เหมาะสำหรับผู้ที่ชื่นชอบอาหารรสจัดและสดใหม่.</p>
+                <div class="star-rating">
+                    <input type="radio" id="star5" name="rating" value="5">
+                    <label for="star5" class="star">
+                        <span class="count">0</span> 
+                    </label>
+                    <input type="radio" id="star4" name="rating" value="4">
+                    <label for="star4" class="star"></label>
+                    <input type="radio" id="star3" name="rating" value="3">
+                    <label for="star3" class="star"></label>
+                    <input type="radio" id="star2" name="rating" value="2">
+                    <label for="star2" class="star"></label>
+                    <input type="radio" id="star1" name="rating" value="1">
+                    <label for="star1" class="star"></label>
+                </div>
+            </div>
+        </div>
+            <div class="comment-box">
+                <textarea id="comment" placeholder="เขียนคอมเมนต์..." required></textarea>
+                <button onclick="postComment()">โพสต์</button>
+            </div>
+            <div id="comments"></div>
+    </div>
+
+    <!--container End-->
+
+    <!-- LOADER start -->
+    <section class="preloader">
+        <div class="content">
+            <div class="preloaderGif">
+                <img src="./img/loader.png" alt="">
+            </div>
+            <h3>Loading...</h3>
+        </div>
+       </section>
+       <!-- LOADER end -->
+
+    <!--script-->
+    <script src="./js/loader.js"></script>
+    <script src="/public/js/nav.js"></script>
+    <script src="./js/comment.js"></script>
+    <script src="./js/star.js"></script>
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/loader.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+   <!-- Nav Start -->
+   <nav>
+    <div class="logo">
+        <img src="./img/logo.png" alt="">
+    </div>
+    <ul class="menu">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+    </ul>
+
+    <ul class="login" id="loginMenu" style="display: none;">
+        <li><a href="login.html">Login</a></li>
+        <li><a href="singup.html">Sign up</a></li>
+    </ul>
+
+    <div class="account" id="accountMenu" style="display: block;">
+            <a href="/account" id="account-icon"><i class="fa-solid fa-user-circle"></i></a>
+    </div>
+    
+    </nav>
+    <!-- Nav END -->
+
+    <!-- Banner start-->
+    <div class="slider">
+        <div class="sliders">
+          <div class="slide active1" >
+            <div class="slide-content">
+              <h1>ฮุ๊กข้าวมันไก่</h1>
+              <p>ร้านอาหารที่เน้นขายข้าวมันไก่เเละเมณูข้าวราดเเกงอื่นๆ มีรสชาติที่อร่อยเเละเรียบง่ายสะดวกสะบายเหมาะสำหรับคนที่ต้องการกินอะไรง่ายๆเเละอร่อยถูกใจ</p>
+              <div class="star-container">
+                <span class="yellow">★</span>
+                <span class="yellow">★</span>
+                <span class="yellow">★</span>
+                <span class="yellow">★</span>
+                <span class="yellow">★</span>
+            </div>
+              <a href="/store1" class="custom-button">OPEN</a>
+            </div>
+            <div class="img-banner">
+              <img src="./img/store1.jpg" alt="">
+            </div>
+          </div>
+          <div class="slide active2">
+            <div class="slide-content">
+              <h1>ลุงเษม ก๋วยเตี๋ยวรสเด็ด</h1>
+              <p>ร้านก๋วยเตี๋ยวรสเด็ด เสิร์ฟก๋วยเตี๋ยวรสเข้มข้น น้ำซุปกลมกล่อม พร้อมเส้นเหนียวนุ่มและเครื่องแน่น จัดจ้านถึงใจ มีราคาที่คุ้มค่า อร่อยเด็ดในทุกชาม! </p>
+              <div class="star-container">
+                <span class="yellow">★</span>
+                <span class="yellow">★</span>
+                <span class="yellow">★</span>
+                <span class="yellow">★</span>
+                <span class="black">★</span>
+            </div>
+            <a href="/store4" class="custom-button">OPEN</a>
+            </div>
+            <div class="img-banner">
+              <img src="./img/store4.jpg" alt="">
+            </div>
+          </div>
+          <div class="slide active3">
+            <div class="slide-content">
+              <h1>ข้าวมันไก่โกหนุน</h1>
+              <p>ร้านอาหารที่เน้นเมนูข้าวมันไก่ซึ่งประกอบด้วยไก่ต้มไก่ทอดบริการรวดเร็วเหมาะสำหรับผู้ที่ต้องการมื้ออาหารที่รวดเร็ว อร่อยและสะดวก</p>
+              <div class="star-container">
+                <span class="yellow">★</span>
+                <span class="yellow">★</span>
+                <span class="yellow">★</span>
+                <span class="yellow">★</span>
+                <span class="twocolor">★</span>
+            </div>
+            <a href="/store6" class="custom-button">OPEN</a>
+            </div>
+            <div class="img-banner">
+              <img src="./img/store6.jpg" alt="">
+            </div>
+          </div>
+          <div class="slide active4">
+            <div class="slide-content">
+              <h1>ร้านเจ๊กิ๊ก</h1>
+              <p>เป็นร้านอาหารที่ขายกับข้าวปรุงสำเร็จให้เลือกหลายเมนูจุดเด่นคือความสะดวกรวดเร็วราคาประหยัดเเละมีความอร่อยถูกใจเเน่นอน</p>
+              <div class="star-container">
+                <span class="yellow">★</span>
+                <span class="yellow">★</span>
+                <span class="yellow">★</span>
+                <span class="yellow">★</span>
+                <span class="black">★</span>
+            </div>
+            <a href="/store2" class="custom-button">OPEN</a>
+            </div>
+            <div class="img-banner">
+              <img src="./img/store2.jpg" alt="">
+            </div>
+          </div>
+        </div>
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+      </div>
+
+
+
+    <!-- Banner End-->
+
+    <!-- container start-->
+      <div class="container">
+          <div class="slide-left">
+            <h1>AREA</h1>
+            <div class="span">
+              <h3 id="menu-e">ICT</h3>
+              <h3 id="menu-x">OTHER</h3>
+            </div>
+          </div>
+            <main>
+              <h1>STORE</h1>
+              <div class="menustore" id="product-container">
+
+              </div>
+            </main>
+            <div class="slide-right">
+              <div class="slideright">
+              </div>
+            </div>
+      </div>
+    <!-- container end-->
+
+
+     <!-- LOADER start -->
+     <section class="preloader">
+      <div class="content">
+          <div class="preloaderGif">
+              <img src="./img/loader.png" alt="">
+          </div>
+          <h3>Loading...</h3>
+      </div>
+     </section>
+     <!-- LOADER end -->
+  
+
+    <!--footer start-->
+    <footer>
+      <p>Copyright 2000</p>
+    </footer>
+    <!--footer end-->
+
+
+    <!--script-->
+    <script src="./js/loader.js"></script>
+    <script src="./js/slider.js"></script>
+    <script src="./js/star.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="/public/js/nav.js"></script>
+  
+</body> 
+</html> 

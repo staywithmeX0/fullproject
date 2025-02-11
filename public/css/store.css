@@ -1,0 +1,238 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  background: #0f172b;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+  position: fixed;
+  top: 0; 
+  width: 100%;  
+  z-index: 1000;  
+}
+
+.menu{
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.menu li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.menu li{
+    margin-left: 10px;
+}
+
+.login{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    font-size: 20px;
+}
+
+.login li{
+    margin-left: 20px;
+    display: inline-block;
+}
+
+.login li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.logo img {
+    width: 120px; 
+    height: auto;  
+    display: block; 
+    margin: 0 auto; 
+}
+
+.account i {
+  font-size: 50px;
+  cursor: pointer;
+}
+
+
+
+.imgstore {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    padding: 5px;
+    overflow: hidden;
+}
+
+.store {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+
+.img {
+    width: 80%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 2px solid #fff;
+}
+
+.img img {
+    width: 100%;
+    height: 100%;
+
+}
+
+.storeinfo {
+    width: 80%;
+    height: 200px;
+    background-color: #333;
+    border: 2px solid #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.storeinfo h1{
+    color: #fff;
+    padding: 20px;
+}
+
+.storeinfo p {
+    color: #fff;
+    font-size: 25px;
+}
+
+.comment-box {
+    width: 80%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    gap: 10px; 
+}
+
+#comment {
+    width: 100%;
+    height: 125px;
+}
+
+.comment {
+    padding: 15px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+#comments {
+    margin-left: 190px;
+    font-size: 30px; 
+    width: 80%;
+    height: 100px;
+    background-color: white;
+    border: 2px solid #fff;
+}
+
+#comments strong{
+    color: blue;
+}
+
+button {
+    font-size: 20px;
+    padding: 10px;
+}
+
+.meta { 
+    font-size: 12px; 
+    color: #555; 
+}
+
+.actions { 
+    margin-top: 5px; 
+}
+
+.reply-box { 
+    margin-left: 20px; 
+    display: none;
+    
+}
+
+.like-btn { 
+    cursor: pointer; 
+    color: red;
+    font-size: 25px;
+}
+
+.replies { 
+    margin-left: 20px; 
+    border-left: 2px solid #ccc; 
+    padding-left: 10px;
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.star-rating {
+    display: flex;
+    flex-direction: row-reverse; 
+    margin: 10px;
+    justify-content: left;
+}
+  
+input[type="radio"] {
+    display: none;
+}
+  
+.star {
+    width: 25px;
+    height: 25px;
+    background: url('https://img.icons8.com/ios-filled/50/000000/star.png') no-repeat center center;
+    background-size: contain;
+    cursor: pointer;
+    position: relative;
+}
+  
+.star .count {
+    position: absolute;
+    bottom: 5px;
+    left: 30px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+}
+  
+  
+.star:hover {
+    transform: scale(1.2);
+}
+  
+input[type="radio"]:checked ~ label {
+    background: url('https://img.icons8.com/ios-filled/50/ffcc00/star.png') no-repeat center center;
+    background-size: contain;
+}
+  
+  
+input[type="radio"]:checked ~ label:hover,input[type="radio"]:not(:checked) ~ label:hover {
+    background: url('https://img.icons8.com/ios-filled/50/ffcc00/star.png') no-repeat center center;
+    background-size: contain;
+}
+  
+input[type="radio"]:checked ~ input[type="radio"] ~ label {
+    background: url('https://img.icons8.com/ios-filled/50/ffcc00/star.png') no-repeat center center;
+    background-size: contain;
+}
